@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CI cashes
+.mypy_cache/
+.pytest_cache/
+
+# Environments
+venv/
+.venv/
+poetry.lock
+
+# IDE settings
+.idea/
+
+# Build files
+dist/
+
+# Data

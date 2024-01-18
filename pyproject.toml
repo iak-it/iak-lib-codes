@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "iak-lib-codes"
+version = "0.0.1a0"
+description = ""
+authors = ["Ivan Kosternoi <iakoster.42@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
