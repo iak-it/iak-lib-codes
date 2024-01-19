@@ -27,7 +27,7 @@ def flake8(session: Session) -> None:
 
 @nox.session(python=False)
 def pylint(session: Session) -> None:
-    session.run("Pylint", "src", "--rc-file", ".config/.pylintrc")
+    session.run("pylint", "src", "--rc-file", ".config/.pylintrc")
 
 
 @nox.session(python=False)
@@ -47,7 +47,7 @@ def flake8_tests(session: Session) -> None:
 
 @nox.session(python=False)
 def pylint_tests(session: Session) -> None:
-    session.run("Pylint", "tests", "--rc-file", ".config/.pylintrc")
+    session.run("pylint", "tests", "--rc-file", ".config/.pylintrc")
 
 
 @nox.session(python=False)

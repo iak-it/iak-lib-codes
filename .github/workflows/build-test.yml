@@ -1,0 +1,37 @@
+on:
+  workflow_call:
+  pull_request:
+  push:
+    branches:
+      - "master"
+      - "ci/**"  # launch everytime when ci edit's
+
+permissions:
+  contents: read
+
+jobs:
+
+  build-test:
+
+    strategy:
+      matrix:
+        os: [ windows-latest, ubuntu-latest ]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: install poetry
+        run: pip install poetry
+
+      - name: install dependencies
+        run: poetry install
+
+      - name: test code
+        run: poetry run nox
