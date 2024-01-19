@@ -1,8 +1,4 @@
-"""
-============================
-Codes (:mod:`iak_lib_codes`)
-============================
-"""
+"""Private module of ``iak-lib-codes`` with codes."""
 from enum import IntEnum
 
 

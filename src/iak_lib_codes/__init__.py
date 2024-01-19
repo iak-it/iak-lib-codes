@@ -1,3 +1,7 @@
+"""
+iak-lib-codes
+=============
+"""
 from ._codes import Code
 
 
