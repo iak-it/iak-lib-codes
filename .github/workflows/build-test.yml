@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: setup poetry
-        uses: iak-it/iak-it-general/.github/actions/poetry-setup.yml@master
+        uses: iak-it/iak-it-general/.github/actions/python/poerty-setup@master
 
       - name: test code
         run: poetry run nox
