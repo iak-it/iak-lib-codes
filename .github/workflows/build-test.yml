@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: setup poetry
-        uses: iak-it/iak-it-general/@ci/actions/.github/actions/poetry-setup.yml
+        uses: iak-it/iak-it-general/.github/actions/poetry-setup.yml
         with:
           python-version: "3.12"
 
