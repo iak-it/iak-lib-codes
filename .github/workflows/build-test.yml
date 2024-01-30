@@ -20,19 +20,10 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkout [${{ github.repository }}]
-        uses: actions/checkout@v3
-
-      - name: set up python
-        uses: actions/setup-python@v4
+      - name: setup poetry
+        uses: iak-it/iak-it-general/blob/ci/actions/.github/actions/poetry-setup.yml
         with:
-          python-version: '3.12'
-
-      - name: install poetry
-        run: pip install poetry
-
-      - name: install dependencies
-        run: poetry install
+          python-version: "3.12"
 
       - name: test code
         run: poetry run nox
