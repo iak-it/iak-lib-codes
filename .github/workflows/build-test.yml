@@ -22,8 +22,6 @@ jobs:
     steps:
       - name: setup poetry
         uses: iak-it/iak-it-general/.github/actions/poetry-setup.yml
-        with:
-          python-version: "3.12"
 
       - name: test code
         run: poetry run nox
