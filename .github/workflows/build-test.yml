@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: set up poetry
-        uses: iak-it/gh-action-python-poetry-setup@ci/action
+        uses: iak-it/gh-action-python-poetry-setup@v0
         with:
           python-version: '3.12'
 
