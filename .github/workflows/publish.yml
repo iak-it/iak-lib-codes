@@ -6,13 +6,10 @@ on:
     tags:
       - "v*.*.*"
 
-
-permissions:
-  contents: read
-
 jobs:
   publish:
     permissions:
+      contents: read
       id-token: write
 
     uses: iak-it/general/.github/workflows/python-poetry-publish.yml@master
