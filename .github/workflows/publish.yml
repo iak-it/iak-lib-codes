@@ -23,22 +23,7 @@ jobs:
       id-token: write
 
     steps:
-      - name: Checkout [${{ github.repository }}]
-        uses: actions/checkout@v3
-
-      - name: set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.12'
-
-      - name: set up environment
-        run: >-
-          pip install poetry
-          poetry install
-
-      - name: Mint token
-        id: mint
-        uses: tschm/token-mint-action@v1.0.2
-
       - name: publish package
-        run: poetry publish --build -u __token__ -p ${{ steps.mint.outputs.api-token }}
+        uses: iak-it-actions/python-poetry-publish@ci/publish
+        with:
+          python-version: "3.12"
