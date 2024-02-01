@@ -1,8 +1,6 @@
 name: Build and publish package
 on:
   push:
-    branches:
-      - "ci/**"
     tags:
       - "v*.*.*"
 
@@ -12,7 +10,7 @@ permissions:
 
 jobs:
   build-test:
-    uses: ./.github/workflows/build-test.yml
+    uses: ./.github/workflows/test-code.yml
 
   publish:
     needs:
@@ -24,6 +22,6 @@ jobs:
 
     steps:
       - name: publish package
-        uses: iak-it-actions/python-poetry-publish@ci/publish
+        uses: iak-it-actions/python-poetry-publish@v0.0.1
         with:
           python-version: "3.12"
