@@ -1,10 +1,10 @@
 #name: Build and publish package
-#on:
-#  push:
-#    branches:
-#      - "ci/**"
-#    tags:
-#      - "v*.*.*"
+on:
+  push:
+    branches:
+      - "ci/**"
+    tags:
+      - "v*.*.*"
 #
 #jobs:
 #  publish:
@@ -16,15 +16,15 @@
 #    with:
 #      python-version: "3.12"
 
-name: Build and publish package to PyPI
-on:
-  workflow_call:
-    inputs:
-      python-version:
-        description: "python version"
-        type: string
-        required: false
-        default: "3.12"
+#name: Build and publish package to PyPI
+#on:
+#  workflow_call:
+#    inputs:
+#      python-version:
+#        description: "python version"
+#        type: string
+#        required: false
+#        default: "3.12"
 
 
 permissions:
