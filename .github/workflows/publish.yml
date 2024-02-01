@@ -12,6 +12,9 @@ permissions:
 
 jobs:
   publish:
+    permissions:
+      id-token: write
+
     uses: iak-it/general/.github/workflows/python-poetry-publish.yml@master
     with:
       python-version: "3.12"
