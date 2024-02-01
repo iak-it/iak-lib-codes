@@ -6,12 +6,25 @@ on:
     tags:
       - "v*.*.*"
 
-jobs:
-  publish:
-    permissions:
-      contents: read
-      id-token: write
+permissions:
+  contents: read
 
-    uses: iak-it/general/.github/workflows/python-poetry-publish.yml@master
+jobs:
+  test-code:
+    uses: iak-it/general/.github/workflows/python-poetry-test.yml@master
     with:
       python-version: "3.12"
+
+  publish:
+    needs:
+      - test-code
+    permissions:
+      id-token: write
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: publish package
+        uses: iak-it-actions/python-poetry-publish@v0.0.1
+        with:
+          python-version: "3.12"
