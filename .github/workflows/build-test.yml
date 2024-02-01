@@ -23,7 +23,7 @@ jobs:
       - name: set up poetry
         uses: iak-it-actions/python-poetry-setup@v0.0.1
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: test code
-        run: poetry run nox
+        uses: iak-it-actions/python-poetry-nox@v0.0.1

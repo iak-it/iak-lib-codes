@@ -1,6 +1,8 @@
 name: Build and publish package
 on:
   push:
+    branches:
+      - "ci/**"
     tags:
       - "v*.*.*"
 
