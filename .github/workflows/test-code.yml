@@ -11,4 +11,4 @@ permissions:
 
 jobs:
   test-code:
-    uses: iak-it/general/.github/workflows/python-poetry-test.yml@master
+    uses: iak-it/general/workflows/python-poetry-test.yml@master
