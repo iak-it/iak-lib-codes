@@ -34,7 +34,7 @@ jobs:
   test-code:
     uses: iak-it/general/.github/workflows/python-poetry-test.yml@master
     with:
-      python-version: ${{ inputs.python-version }}
+      python-version: "3.12"
 
   publish:
     needs:
@@ -48,4 +48,4 @@ jobs:
       - name: publish package
         uses: iak-it-actions/python-poetry-publish@v0.0.1
         with:
-          python-version: ${{ inputs.python-version }}
+          python-version: "3.12"
